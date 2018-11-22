@@ -12,6 +12,5 @@ rec {
   prm = pkgs.callPackage ./pkgs/prm {};
   protobuild = pkgs.callPackage ./pkgs/protobuild {};
   s2i = pkgs.callPackage ./pkgs/s2i {};
-  skaffold = pkgs.callPackage ./pkgs/skaffold {};
   slirp4netns = pkgs.callPackage ./pkgs/slirp4netns {};
 }
