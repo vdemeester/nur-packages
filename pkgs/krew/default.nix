@@ -1,9 +1,9 @@
 { stdenv, lib, buildGoPackage, fetchFromGitHub }:
 
 buildGoPackage rec {
-  name = "krew-unstable-${version}";
-  version = "2018-09-26";
-  rev = "4f7485c1bdd303efee97ab709488829b222e5335";
+  name = "krew-${version}";
+  version = "0.2.1";
+  rev = "v${version}";
 
   goPackagePath = "github.com/GoogleContainerTools/krew";
 
@@ -11,7 +11,7 @@ buildGoPackage rec {
     inherit rev;
     owner = "GoogleContainerTools";
     repo = "krew";
-    sha256 = "0rv7gikvnwj0lrn8f1v868jfs4i8hkqv5j289lgr5hzr0pjx9v8a";
+    sha256 = "078vc54mfgx0nigr0hwrih2i4ifq2kfk3jy4zj5i8hs7631xz5s1";
   };
 
   meta = {
