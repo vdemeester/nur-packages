@@ -17,6 +17,6 @@ buildGoPackage rec {
   meta = {
     description = "Secure environment variables via secretbox";
     homepage = "https://github.com/justone/envbox";
-    licence = lib.licenses.mit;
+    license = lib.licenses.mit;
   };
 }

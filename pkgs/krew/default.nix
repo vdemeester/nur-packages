@@ -17,6 +17,6 @@ buildGoPackage rec {
   meta = {
     description = "The package manager for 'kubectl plugins. ";
     homepage = "https://github.com/GoogleContainerTools/krew";
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }

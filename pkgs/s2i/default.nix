@@ -18,6 +18,6 @@ buildGoPackage rec {
   meta = {
     description = "A tool for building/building artifacts from source and injecting into docker images";
     homepage = https://github.com/openshift/source-to-image;
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }

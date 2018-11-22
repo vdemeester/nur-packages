@@ -26,6 +26,6 @@ buildGoPackage rec {
   meta = {
     description = "Pull Request Manager for Maintainers";
     homepage = "https://github.com/ldez/prm";
-    licence = lib.licences.asl20;
+    license = lib.licenses.asl20;
   };
 }

@@ -18,6 +18,6 @@ buildGoPackage rec {
   meta = {
     description = "Knative CLI";
     homepage = https://github.com/cppforlife/knctl;
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }
