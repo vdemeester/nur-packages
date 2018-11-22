@@ -2,7 +2,7 @@
 
 buildGoPackage rec {
   name = "envbox-${version}";
-  version = "0.0.3";
+  version = "0.2.0";
   rev = "v${version}";
 
   goPackagePath = "github.com/justone/envbox";
@@ -11,7 +11,7 @@ buildGoPackage rec {
     inherit rev;
     owner = "justone";
     repo = "envbox";
-    sha256 = "0ihwdhq05s0116ngcnh3vsxhm5k3lnidyaky2qv6dbw1hnq2pv1y";
+    sha256 = "0jryr7czaqdhqq4w7mjmhbpplfflg4b0hgfgyn8jn5l2sd63k70i";
   };
 
   meta = {
