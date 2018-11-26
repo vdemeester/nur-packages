@@ -10,7 +10,6 @@ rec {
   gogo-protobuf = pkgs.callPackage ./pkgs/gogo-protobuf {};
   knctl = pkgs.callPackage ./pkgs/knctl {};
   krew = pkgs.callPackage ./pkgs/krew {};
-  kube-prompt = pkgs.callPackage ./pkgs/kube-prompt {};
   podman = pkgs.callPackage ./pkgs/podman {};
   prm = pkgs.callPackage ./pkgs/prm {};
   protobuild = pkgs.callPackage ./pkgs/protobuild {};
