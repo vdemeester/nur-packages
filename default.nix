@@ -1,6 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 
 rec {
+  ape = pkgs.callPackage ./pkgs/ape {};
   conmon = pkgs.callPackage ./pkgs/conmon {};
   dobi = pkgs.callPackage ./pkgs/dobi {};
   dep-collector = pkgs.callPackage ./pkgs/dep-collector {};
