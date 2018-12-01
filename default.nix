@@ -2,6 +2,7 @@
 
 rec {
   ape = pkgs.callPackage ./pkgs/ape {};
+  buildkit = pkgs.callPackage ./pkgs/buildkit {};
   conmon = pkgs.callPackage ./pkgs/conmon {};
   dobi = pkgs.callPackage ./pkgs/dobi {};
   dep-collector = pkgs.callPackage ./pkgs/dep-collector {};
