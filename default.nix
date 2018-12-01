@@ -3,6 +3,8 @@
 rec {
   ape = pkgs.callPackage ./pkgs/ape {};
   buildkit = pkgs.callPackage ./pkgs/buildkit {};
+  cni = pkgs.callPackage ./pkgs/cni {};
+  cni-plugins = pkgs.callPackage ./pkgs/cni/plugins.nix {};
   conmon = pkgs.callPackage ./pkgs/conmon {};
   containerd = pkgs.callPackage ./pkgs/containerd {};
   dobi = pkgs.callPackage ./pkgs/dobi {};
