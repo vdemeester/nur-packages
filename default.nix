@@ -20,4 +20,5 @@ rec {
   runc = pkgs.callPackage ./pkgs/runc {};
   s2i = pkgs.callPackage ./pkgs/s2i {};
   slirp4netns = pkgs.callPackage ./pkgs/slirp4netns {};
+  stellar = pkgs.callPackage ./pkgs/stellar {};
 }
