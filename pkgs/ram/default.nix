@@ -2,7 +2,7 @@
 
 buildGoPackage rec {
   name = "ram-${version}";
-  version = "0.1.2";
+  version = "0.1.3";
   rev = "v${version}";
 
   goPackagePath = "github.com/vdemeester/ram";
@@ -11,7 +11,7 @@ buildGoPackage rec {
     inherit rev;
     owner = "vdemeester";
     repo = "ram";
-    sha256 = "0vy57cy0mrp86wqzjsh3s4zl6iwrxa04gvj48ngbi5hhns9kqzif";
+    sha256 = "11rxpb0n1ph5193rds0invbbsw4w1dpn1yxbqcq2hif446n3wg62";
   };
 
   meta = {
