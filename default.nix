@@ -3,7 +3,6 @@
 rec {
   ape = pkgs.callPackage ./pkgs/ape {};
   athens = pkgs.callPackage ./pkgs/athens {};
-  buildkit = pkgs.callPackage ./pkgs/buildkit {};
   dobi = pkgs.callPackage ./pkgs/dobi {};
   dep-collector = pkgs.callPackage ./pkgs/dep-collector {};
   envbox = pkgs.callPackage ./pkgs/envbox {};
@@ -19,10 +18,12 @@ rec {
   stellar = pkgs.callPackage ./pkgs/stellar {};
   
   # Upstream
+  buildkit = pkgs.callPackage ./pkgs/buildkit {};
   cni = pkgs.callPackage ./pkgs/cni {};
   cni-plugins = pkgs.callPackage ./pkgs/cni/plugins.nix {};
   conmon = pkgs.callPackage ./pkgs/podman/conmon.nix {};
   containerd = pkgs.callPackage ./pkgs/containerd {};
+  linuxkit = pkgs.callPackage ./pkgs/linuxkit {};
   podman = pkgs.callPackage ./pkgs/podman {};
   runc = pkgs.callPackage ./pkgs/runc {};
 }
