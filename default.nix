@@ -21,6 +21,7 @@ rec {
   krew = pkgs.callPackage ./pkgs/krew {};
   prm = pkgs.callPackage ./pkgs/prm {};
   protobuild = pkgs.callPackage ./pkgs/protobuild {};
+  rmapi = pkgs.callPackage ./pkgs/rmapi {};
   s2i = pkgs.callPackage ./pkgs/s2i {};
   slirp4netns = pkgs.callPackage ./pkgs/slirp4netns {};
   stellar = pkgs.callPackage ./pkgs/stellar {};
