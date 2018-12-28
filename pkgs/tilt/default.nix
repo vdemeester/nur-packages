@@ -17,6 +17,6 @@ buildGoPackage rec {
   meta = {
     description = "Local Kubernetes development with no stress";
     homepage = "https://github.com/windmilleng/tilt";
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }

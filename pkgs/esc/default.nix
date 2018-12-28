@@ -19,6 +19,6 @@ buildGoPackage rec {
   meta = {
     description = "A simple file embedder for Go";
     homepage = "https://github.com/mjibson/esc";
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }

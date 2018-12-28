@@ -19,6 +19,6 @@ buildGoPackage rec {
   meta = {
     description = "A gofmt/goimports-like tool for Go programmers that fills in Go return statements with zero values to match the func return types";
     homepage = https://github.com/sqs/goreturns;
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }

@@ -17,6 +17,6 @@ buildGoPackage rec {
   meta = {
     description = "yak — Yet Another Kubernetes …";
     homepage = "https://github.com/vdemeester/yak";
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }

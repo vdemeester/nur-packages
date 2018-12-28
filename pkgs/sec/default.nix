@@ -17,6 +17,6 @@ buildGoPackage rec {
   meta = {
     description = "Sec § — a golang opiniated dependency updater";
     homepage = "https://github.com/vdemeester/sec";
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }

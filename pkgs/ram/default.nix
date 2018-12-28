@@ -17,6 +17,6 @@ buildGoPackage rec {
   meta = {
     description = "A golang opiniated continuous testing tool 🐏";
     homepage = "https://github.com/vdemeester/ram";
-    licence = lib.licenses.asl20;
+    license = lib.licenses.asl20;
   };
 }
