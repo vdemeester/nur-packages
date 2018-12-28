@@ -24,6 +24,8 @@ rec {
   s2i = pkgs.callPackage ./pkgs/s2i {};
   slirp4netns = pkgs.callPackage ./pkgs/slirp4netns {};
   stellar = pkgs.callPackage ./pkgs/stellar {};
+  tilt = pkgs.callPackage ./pkgs/tilt {};
+
   # Upstream
   buildkit = pkgs.callPackage ./pkgs/buildkit {};
   cni = pkgs.callPackage ./pkgs/cni {};
