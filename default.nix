@@ -13,6 +13,7 @@ rec {
   dobi = pkgs.callPackage ./pkgs/dobi {};
   dep-collector = pkgs.callPackage ./pkgs/dep-collector {};
   envbox = pkgs.callPackage ./pkgs/envbox {};
+  esc = pkgs.callPackage ./pkgs/esc {};
   go-containerregistry = pkgs.callPackage ./pkgs/go-containerregistry {};
   gogo-protobuf = pkgs.callPackage ./pkgs/gogo-protobuf {};
   knctl = pkgs.callPackage ./pkgs/knctl {};
