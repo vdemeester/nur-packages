@@ -26,6 +26,7 @@ rec {
   slirp4netns = pkgs.callPackage ./pkgs/slirp4netns {};
   stellar = pkgs.callPackage ./pkgs/stellar {};
   tilt = pkgs.callPackage ./pkgs/tilt {};
+  yaspell = pkgs.callPackage ./pkgs/yaspell {};
 
   # Upstream
   buildkit = pkgs.callPackage ./pkgs/buildkit {};
