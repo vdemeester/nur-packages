@@ -16,6 +16,7 @@ rec {
   esc = pkgs.callPackage ./pkgs/esc {};
   go-containerregistry = pkgs.callPackage ./pkgs/go-containerregistry {};
   gogo-protobuf = pkgs.callPackage ./pkgs/gogo-protobuf {};
+  goreturns = pkgs.callPackage ./pkgs/goreturns {};
   knctl = pkgs.callPackage ./pkgs/knctl {};
   krew = pkgs.callPackage ./pkgs/krew {};
   prm = pkgs.callPackage ./pkgs/prm {};
