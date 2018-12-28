@@ -3,6 +3,7 @@
 rec {
   ape = pkgs.callPackage ./pkgs/ape {};
   sec = pkgs.callPackage ./pkgs/sec {};
+  yak = pkgs.callPackage ./pkgs/yak {};
   athens = pkgs.callPackage ./pkgs/athens {};
   dobi = pkgs.callPackage ./pkgs/dobi {};
   dep-collector = pkgs.callPackage ./pkgs/dep-collector {};
