@@ -17,6 +17,6 @@ buildGoPackage rec {
   meta = {
     description = "Go app that allows you to access your reMarkable tablet files through the Cloud API";
     homepage = "https://github.com/juruen/rmapi";
-    license = lib.licenses.gpl30;
+    license = lib.licenses.gpl3;
   };
 }
