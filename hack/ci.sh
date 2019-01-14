@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
-function build_and_push {
-    nix-channel --list
-    nix-channel --update
-    $(dirname $0)/pkgs-build-cachix.sh
-}
+nix-channel --list
 
-build_and_push
+nix-channel --add ${CHANNEL} nixpkgs
 
-nix-channel --add nixpkgs https://nixos.org/channels/nixos-18.09
+nix-channel --list
+nix-channel --update
 
-build_and_push
+$(dirname $0)/pkgs-build-cachix.sh
