@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-function build-and-push() {
+function build_and_push {
     nix-channel --list
     nix-channel --update
-    ./pkgs-build-cachix.sh
+    $(dirname $0)/pkgs-build-cachix.sh
 }
 
 build_and_push
