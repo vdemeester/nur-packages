@@ -1,5 +1,4 @@
 language: nix
 script:
-  - nix-channel --update
   - nix-env -iA cachix -f https://cachix.org/api/v1/install
-  - ./hack/pkgs-build-cachix.sh
+  - ./hack/ci.sh
