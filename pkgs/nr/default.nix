@@ -2,7 +2,7 @@
 
 buildGoPackage rec {
   name = "nr-${version}";
-  version = "0.1.1";
+  version = "0.2.0";
   rev = "v${version}";
 
   goPackagePath = "github.com/vdemeester/nr";
@@ -11,7 +11,7 @@ buildGoPackage rec {
     inherit rev;
     owner = "vdemeester";
     repo = "nr";
-    sha256 = "0hs6llm7bahwabgspsjyr6dy4w9ibfrrmjakln3ipfk6iamhqwxh";
+    sha256 = "1px7yg9vl30n8nda2amgif366hl30bhgdyy7qiaihybwpbbr4h45";
   };
 
   meta = {
