@@ -1,12 +1,12 @@
-{ stdenv, lib, fetchFromGitHub, buildGoPackage }:
+{ stdenv, fetchFromGitHub, buildGoPackage }:
 
 buildGoPackage rec {
-  name = "buildkit${version}";
+  pname = "buildkit";
   version = "0.3.3";
   rev = "v${version}";
 
   goPackagePath = "github.com/moby/buildkit";
-  subPackages = [ "cmd/buildctl" "cmd/buildkitd" ];
+  subPackages = [ "cmd/buildctl" ] ++ stdenv.lib.optionals stdenv.isLinux [ "cmd/buildkitd" ];
 
   src = fetchFromGitHub {
     inherit rev;
@@ -15,9 +15,10 @@ buildGoPackage rec {
     sha256 = "06d79k6s19fsv80fp9wprxxr1yrgzwyfhb7ccwgk4dbs5iaghd68";
   };
 
-  meta = {
-    description = "concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit";
+  meta = with stdenv.lib; {
+    description = "Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit";
     homepage = https://github.com/moby/buildkit;
-    license = lib.licenses.asl20;
+    license = licenses.asl20;
+    maintainers = with maintainers; [ vdemeester ];
   };
 }
