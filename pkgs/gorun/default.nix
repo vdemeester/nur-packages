@@ -17,6 +17,6 @@ buildGoPackage rec {
   meta = {
     description = "gorun is a tool enabling one to put a \"bang line\" in the source code of a Go program to run it";
     homepage = "https://github.com/erning/gorun";
-    license = lib.licenses.gpl30;
+    license = lib.licenses.gpl3;
   };
 }
