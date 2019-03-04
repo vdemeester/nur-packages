@@ -18,6 +18,7 @@ rec {
   go-containerregistry = pkgs.callPackage ./pkgs/go-containerregistry {};
   gogo-protobuf = pkgs.callPackage ./pkgs/gogo-protobuf {};
   goreturns = pkgs.callPackage ./pkgs/goreturns {};
+  gorun = pkgs.callPackage ./pkgs/gorun {};
   knctl = pkgs.callPackage ./pkgs/knctl {};
   krew = pkgs.callPackage ./pkgs/krew {};
   #openshift-installer = pkgs.callPackage ./pkgs/openshift-installer {};
