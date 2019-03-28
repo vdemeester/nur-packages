@@ -1,5 +1,5 @@
 { stdenv, buildGoPackage, fetchFromGitHub, go-bindata, libvirt, qemu
-, gpgme, makeWrapper, vmnet, python
+, gpgme, makeWrapper,  python
 , docker-machine-kvm, docker-machine-kvm2
 , extraDrivers ? []
 }:
