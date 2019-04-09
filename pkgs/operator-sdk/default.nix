@@ -17,8 +17,8 @@ buildGoPackage rec {
   };
 
   meta = {
-    description = "Install an OpenShift cluster";
-    homepage = https://github.com/openshift/installer;
+    description = "SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding";
+    homepage = https://github.com/operator-framework/operator-sdk;
     license = lib.licenses.asl20;
   };
 }
