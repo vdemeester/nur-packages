@@ -6,7 +6,10 @@ buildGoPackage rec {
   version = "0.1.2";
 
   goPackagePath = "github.com/tektoncd/cli";
-
+  buildFlagsArray = let t = "${goPackagePath}/pkg/cmd/version"; in ''
+     -ldflags=
+       -X ${t}.clientVersion=${version} 
+  '';
   src = fetchFromGitHub {
     owner = "tektoncd";
     repo = "cli";
