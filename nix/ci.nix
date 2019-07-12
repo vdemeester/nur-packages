@@ -2,6 +2,10 @@
 let
   # nix-build doesn't traverse names with periods...
   targetConfigs = {
+    "nixpkgs-unstable" = {
+      nixpkgsSource = "nixpkgs-unstable";
+      system = "x86_64-linux";
+    };
     "nixos-unstable" = {
       nixpkgsSource = "nixos-unstable";
       system = "x86_64-linux";

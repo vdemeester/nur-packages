@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-nix-build --no-out-link . | cachix push shortbrain
+channel=$(echo $CHANNEL | grep / | cut -d/ -f5-)
+nix-build --no-out-link . -A allTargets.$channel | cachix push shortbrain
 
