@@ -1,9 +1,26 @@
-{ sources ? import ./sources.nix }:
-with
-  { overlay = _: pkgs:
-      { niv = pkgs.haskell.lib.justStaticExecutables (import sources.niv {}).niv;
-        sources = sources;
-      };
+{ sources ? import ./sources.nix
+, nixpkgsSource ? "nixos-19.03"
+, nixpkgs ? sources."${nixpkgsSource}"
+  # Sharing the test suite
+, allTargets ? import ./ci.nix
+, testSuiteTarget ? "nixos-19_03"
+, testSuitePkgs ? allTargets."${testSuiteTarget}"
+, system ? builtins.currentSystem
+}:
+let
+  dev-and-test-overlay = self: pkgs: {
+    inherit allTargets;
+    devTools = {
+      inherit (pkgs)
+        shellcheck
+        jq
+        nix-prefetch-git
+        ;
+      inherit (import sources.niv {})
+        niv
+        ;
+      inherit pkgs;
+    };
   };
-import sources.nixpkgs
-  { overlays = [ overlay ] ; config = {}; }
+  pkgs = import nixpkgs { overlays = [ (import ./overlay.nix) dev-and-test-overlay ] ; config = {}; inherit system; };
+in pkgs
