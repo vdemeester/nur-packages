@@ -44,6 +44,7 @@ pkgs.recurseIntoAttrs {
     conmon
     containerd
     linuxkit
+    minikube
     podman
     runc
     # all

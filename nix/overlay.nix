@@ -42,5 +42,6 @@ in {
   containerd = pkgs.callPackage ../pkgs/containerd {};
   linuxkit = pkgs.callPackage ../pkgs/linuxkit {};
   podman = pkgs.callPackage ../pkgs/podman {};
+  minikube = pkgs.callPackage ../pkgs/minikube {};
   runc = pkgs.callPackage ../pkgs/runc {};
 }
