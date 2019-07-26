@@ -26,7 +26,7 @@ in buildGo111Module rec {
     sha256 = "0l9znrp49877cp1bkwx84c8lv282ga5a946rjbxi8gznkf3kwaw7";
   };
 
-  modSha256 = "1cp63n0x2lgbqvvymx9byx48r42qw6w224x5x4iiarc2nryfdhn0";
+  modSha256 = "1dj1cp4kl3aqr1gqr10w95vmibbb9m77vfjra1bi74mp9yvyl4i2";
 
   buildInputs = [ go-bindata makeWrapper gpgme ];
   subPackages = [ "cmd/minikube" ] ++ stdenv.lib.optional stdenv.hostPlatform.isDarwin "cmd/drivers/hyperkit";
