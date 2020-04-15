@@ -1,32 +1,31 @@
-{ stdenv, lib, buildGoPackage, fetchFromGitHub, libvirt, git, pkgconfig }:
+{ stdenv, lib, fetchurl }:
 
-buildGoPackage rec {
-  name = "openshift-install-${version}";
-  version = "0.16.1";
-  rev = "v${version}";
+stdenv.mkDerivation rec {
+  pname = "openshift-install";
+  version = "4.4.0-rc.8";
+  name = "${pname}-${version}";
 
-  goPackagePath = "github.com/openshift/installer";
-
-  src = fetchFromGitHub {
-    inherit rev;
-    owner = "openshift";
-    repo = "installer";
-    sha256 = "1gn6m8hw7q5mijrp4rz1pwpwra4dish70dbygm2ksl02zc51x83r";
+  src = fetchurl {
+    url = "https://dl.sbr.pm/nix/oc/openshift-install-linux-${version}.tar.gz";
+    sha256 = "0br2zwwb8avkgslgl5snkgvf3n226pvccgfq73fxr55i1bqjqarp";
   };
 
-  patches = [ ./0001-Do-not-call-git.patch ];
+  phases = " unpackPhase installPhase fixupPhase ";
 
-  nativeBuildInputs = [ pkgconfig ];
-  buildInputs = [ libvirt git ];
-
-  buildPhase = ''
-    cd go/src/${goPackagePath}
-    GITCOMMIT=${version} TAGS=libvirt hack/build.sh
+  unpackPhase = ''
+    runHook preUnpack
+    mkdir ${name}
+    tar -C ${name} -xzf $src
   '';
 
   installPhase = ''
-    mkdir -p $bin/bin
-    cp -a bin/* "$bin/bin"
+    runHook preInstall
+    install -D ${name}/openshift-install $out/bin/openshift-install
+    # completions
+    mkdir -p $out/share/bash-completion/completions/
+    $out/bin/openshift-install completion bash > $out/share/bash-completion/completions/openshift-install
+    mkdir -p $out/share/zsh/site-functions
+    $out/bin/openshift-install completion zsh > $out/share/zsh/site-functions/_openshift-install
   '';
 
   meta = {
