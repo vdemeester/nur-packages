@@ -29,10 +29,8 @@ rec {
   prm = pkgs.callPackage ./pkgs/prm {};
   protobuild = pkgs.callPackage ./pkgs/protobuild {};
   rmapi = pkgs.callPackage ./pkgs/rmapi {};
-  slirp4netns = pkgs.callPackage ./pkgs/slirp4netns {};
   toolbox = pkgs.callPackage ./pkgs/toolbox {};
   yaspell = pkgs.callPackage ./pkgs/yaspell {};
-  s2i = pkgs.callPackage ./pkgs/s2i {};
 
   # OpenShift
   inherit (pkgs.callPackage ./pkgs/oc {})
