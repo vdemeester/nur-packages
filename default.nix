@@ -46,7 +46,11 @@ rec {
   operator-sdk = pkgs.callPackage ./pkgs/operator-sdk {};
 
   # Tekton
-  tkn = pkgs.callPackage ./pkgs/tkn {};
+  inherit (pkgs.callPackage ./pkgs/tkn {})
+    tkn_0_8
+    tkn_0_9
+    ;
+  tkn = tkn_0_9;
 
   # Upstream
   buildkit = pkgs.callPackage ./pkgs/buildkit {};
