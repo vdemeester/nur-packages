@@ -34,10 +34,10 @@ rec {
 
   # OpenShift
   inherit (pkgs.callPackage ./pkgs/oc {})
-    oc_4_4
-    oc_4_3
-    oc_4_2
     oc_4_1
+    oc_4_2
+    oc_4_3
+    oc_4_4
     ;
   oc = oc_4_4;
   openshift-install = pkgs.callPackage ./pkgs/openshift-install {};
