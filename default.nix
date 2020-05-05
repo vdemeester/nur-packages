@@ -59,5 +59,4 @@ rec {
     containerd_1_3
     ;
   containerd = containerd_1_3;
-  linuxkit = pkgs.callPackage ./pkgs/linuxkit {};
 }
